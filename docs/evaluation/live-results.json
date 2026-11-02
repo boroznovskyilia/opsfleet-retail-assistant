@@ -1,0 +1,82 @@
+{
+  "reviewed": "2026-11-02T15:08:20.326056+00:00",
+  "model": "google/gemini-3.8-flash",
+  "final_source_sha256": "8b7ce5657c0db0dff99a3237812a1f0589b0683dc71371f9a74e17d496e48e42",
+  "live_analytical_source_sha256": "f5a5be75c2603812073142ce5f5896661ea2c32b97bdd5c6ca23281a2b26c912",
+  "final_delta": [
+    "src/retail_assistant/store.py",
+    "tests/test_store.py"
+  ],
+  "analytical_components_unchanged": true,
+  "local_tests": 55,
+  "tooling_tests": 13,
+  "live_cases": [
+    {
+      "id": "live-1",
+      "question": "Compare completed sales and spending per active buyer by state",
+      "elapsed_seconds": 20.78,
+      "queries": 2,
+      "issues": [],
+      "has_actions": true
+    },
+    {
+      "id": "live-2",
+      "question": "Show monthly revenue and explain limitations of the trend",
+      "elapsed_seconds": 18.43,
+      "queries": 1,
+      "issues": [],
+      "has_actions": true
+    },
+    {
+      "id": "live-3",
+      "question": "Create a report comparing permitted product performance with hypotheses and action items",
+      "elapsed_seconds": 57.84,
+      "queries": 4,
+      "issues": [],
+      "has_actions": true
+    }
+  ],
+  "product_comparison": {
+    "status": "passed",
+    "elapsed_seconds": 19.5,
+    "period": {
+      "start": "2020-01-01",
+      "end": "2026-10-31"
+    },
+    "product_ids": [
+      24144,
+      2058
+    ]
+  },
+  "cli": {
+    "status": "passed",
+    "elapsed_seconds": 28.61,
+    "ranking_and_followup": true,
+    "explicit_save_preview_restart_confirm_repeat_history": true,
+    "final_store_process": "passed"
+  },
+  "source_review": {
+    "status": "passed",
+    "numeric_comparisons": 239,
+    "join_grain_verified": true,
+    "april_publishable_product_groups": 0,
+    "oracle_sha256": "9b7534f7327c6ac8638a7d21c62256caef358d712917046f28fb5dd46a53a2fc"
+  },
+  "budget": {
+    "checked": "2026-11-02T14:58:41.432125+00:00",
+    "limit": 5,
+    "limit_reset": null,
+    "provider_reported_usage": 0.11035725,
+    "local_ledger_including_reservations": {
+      "usd": 0.88775,
+      "overruns": 0
+    }
+  },
+  "review_kind": "AI-assisted source/intent review; not independent human or held-out evaluation",
+  "raw_evidence_location": ".runtime/evaluation (ignored, user-local)",
+  "limits": [
+    "Known demonstration cases only; no unseen-question accuracy or production load claim.",
+    "Runtime SQL/PII/demo-identity boundaries remain as documented.",
+    "After paid live checks, the final code change only strengthens the frozen-title store check and adds its regression; final local/process tests were rerun."
+  ]
+}

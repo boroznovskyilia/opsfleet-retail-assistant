@@ -1,0 +1,11 @@
+{
+  "created": "2026-11-02T16:15:02.285895+00:00",
+  "layer": "local_mechanics",
+  "source_sha256": "bca2c6746209a8c08ff0979a9ec74f0dbb1152de42945fb45a7a5bcad144d391",
+  "model": "google/gemini-3.8-flash",
+  "tests": 67,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "live_quality": "not_run"
+}

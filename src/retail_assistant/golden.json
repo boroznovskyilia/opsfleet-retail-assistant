@@ -1,0 +1,34 @@
+[
+  {
+    "id": "spending-decomposition",
+    "scope": "generic",
+    "provenance": "Educational example created for this prototype; not a supplied human analyst report.",
+    "question": "Why do buyers in one state spend less than buyers in another state?",
+    "sql": "SELECT state, SUM(amount) AS revenue, COUNT(DISTINCT customer_ref) AS buyers, COUNT(DISTINCT order_id) AS orders, SAFE_DIVIDE(SUM(amount), COUNT(DISTINCT customer_ref)) AS spend_per_buyer, SAFE_DIVIDE(COUNT(DISTINCT order_id), COUNT(DISTINCT customer_ref)) AS order_frequency, SAFE_DIVIDE(SUM(amount), COUNT(DISTINCT order_id)) AS average_order_value FROM sales GROUP BY state",
+    "report": "Compare spending per active buyer on the same permitted products and period. Decompose it into order frequency and average order value. Lower observed frequency is an associated factor, not evidence of a marketing cause. Test product mix or targeted retention interventions with additional evidence; do not invent numerical findings."
+  },
+  {
+    "id": "product-performance",
+    "scope": "generic",
+    "provenance": "Educational example created for this prototype; not a supplied human analyst report.",
+    "question": "Compare performance of products and explain their sales differences.",
+    "sql": "SELECT product_id, product_name, SUM(amount) AS revenue, COUNT(DISTINCT order_id) AS orders, COUNT(DISTINCT customer_ref) AS buyers FROM sales GROUP BY product_id, product_name ORDER BY revenue DESC LIMIT 10",
+    "report": "Compare completed sales, qualifying order counts and buyer counts. Differences may reflect the number of buyers, frequency or sale-price mix. No advertising, availability or causal demand claim is supported without those data. Five-buyer suppression is added by code before top-N."
+  },
+  {
+    "id": "monthly-trend",
+    "scope": "generic",
+    "provenance": "Educational example created for this prototype; not a supplied human analyst report.",
+    "question": "Show monthly revenue and compare temporal performance.",
+    "sql": "SELECT DATE_TRUNC(sale_date, MONTH) AS month, SUM(amount) AS revenue, COUNT(DISTINCT order_id) AS orders, COUNT(DISTINCT customer_ref) AS buyers FROM sales GROUP BY month ORDER BY month",
+    "report": "Use explicit UTC dates and the item-created sale timestamp. Identify incomplete months before comparing them. A chart or selected rows do not establish a full-period total; execute an independent total when requested."
+  },
+  {
+    "id": "quarterly-report",
+    "scope": "generic",
+    "provenance": "Educational example created for this prototype; not a supplied human analyst report.",
+    "question": "Create a quarterly report with insights and action items for the following quarter.",
+    "sql": "SELECT SUM(amount) AS revenue, COUNT(DISTINCT order_id) AS orders, COUNT(DISTINCT customer_ref) AS buyers, SAFE_DIVIDE(SUM(amount), COUNT(DISTINCT customer_ref)) AS spend_per_buyer FROM sales",
+    "report": "State period, allowed-product scope and sales definition. Present exact totals and relevant product/month breakdowns, measured observations, separately labeled hypotheses, proposed actions and how to validate them. Save only when explicitly requested. Do not carry historical example values into current findings."
+  }
+]

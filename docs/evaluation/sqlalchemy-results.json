@@ -1,0 +1,58 @@
+{
+  "created": "2026-11-02T16:15:22.927532+00:00",
+  "source_sha256": "bca2c6746209a8c08ff0979a9ec74f0dbb1152de42945fb45a7a5bcad144d391",
+  "local_tests": 67,
+  "tooling_tests": 13,
+  "real_model": "google/gemini-3.8-flash",
+  "passed": true,
+  "source_review": {
+    "numeric_comparisons": 266,
+    "all_groups_matched": true,
+    "join_grain_verified": true,
+    "catalogs": [
+      {
+        "owner": "analyst_a",
+        "rows": 50,
+        "scope_passed": true
+      },
+      {
+        "owner": "analyst_b",
+        "rows": 50,
+        "scope_passed": true
+      }
+    ]
+  },
+  "report": {
+    "issues": [],
+    "elapsed_seconds": 23.78,
+    "queries": 1,
+    "saved": true
+  },
+  "cli": {
+    "elapsed_seconds": 13.64,
+    "history_rows_retained": 4,
+    "exact_owned_reports_deleted": 2,
+    "repeated_receipt": true
+  },
+  "legacy_runtime": {
+    "all_existing_rows_preserved": true,
+    "baseline_spend": {
+      "usd": 0.88775,
+      "overruns": 0
+    }
+  },
+  "budget": {
+    "provider": {
+      "limit": 5,
+      "limit_reset": null,
+      "usage": 0.11785725
+    },
+    "local_ledger_including_reservations": {
+      "usd": 0.899753,
+      "overruns": 0
+    }
+  },
+  "retained_failure": "Initial real catalogue query lacked an explicit table alias. Fixed with a reproducing regression and reran local/live checks. No paid generation occurred before this failure.",
+  "review_kind": "AI-assisted known-case source/intent review; not independent expert or production-load acceptance",
+  "private_evidence": ".runtime/evaluation/sqlalchemy-live.json and sqlalchemy-preservation.json"
+}
