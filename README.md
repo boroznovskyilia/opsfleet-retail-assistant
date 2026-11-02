@@ -6,6 +6,8 @@ analyst methods, saves requested reports and deletes owned reports only after ex
 confirmation. Local safety/process tests run without credentials; real provider/source
 checks and their limits are recorded separately.
 
+Public repository: [boroznovskyilia/opsfleet-retail-assistant](https://github.com/boroznovskyilia/opsfleet-retail-assistant).
+
 ## Start
 
 Requirements: Python 3.12+, [uv](https://docs.astral.sh/uv/), Make. From this checkout:

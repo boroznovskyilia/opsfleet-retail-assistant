@@ -23,7 +23,7 @@ Executed results and source fingerprints are in [verification](../development/ve
 | DEL-01/02: diagram/services/flows/reasons/all eight requirements | [Production HLD](../architecture/production.md), [DESIGN](../../DESIGN.md), [prototype contract](../specs/prototype.md) | Manual source-to-design consistency review; no production hosting claim |
 | DEL-03: CLI, setup and another machine | English CLI, locked Python package, [README](../../README.md), [setup](../development/setup.md) | Clean export locked installation/build, package includes Golden JSON, real subprocess restart |
 | DEL-04: framework choice and honest experience | LangGraph selected by owner; hands-on implementation with AI assistance | DESIGN explains selection and assistance; no invented experience tenure |
-| DEL-05: public repository submission | Public GitHub publication authorized by the owner | Exact repository URL, visibility and verified HEAD are tracked in [progress](../plans/progress.json); sending the link to the hiring team is separate |
+| DEL-05: public repository submission | [Public GitHub repository](https://github.com/boroznovskyilia/opsfleet-retail-assistant) with source, docs and Mermaid architecture | Anonymous public access and exact remote/local file hashes verified; commit details are tracked in [progress](../plans/progress.json). Sending the link to the hiring team is separate |
 
 ## Accepted refinements
 

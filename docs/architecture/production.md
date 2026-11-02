@@ -168,4 +168,5 @@ actual commands/example transcripts. This HLD is not provisioned, load-tested or
 for an unspecified production volume. Authentication, vector indexing, admin editor,
 learning jobs, production monitoring/retention/HA and broader SQL coverage are design
 only. Exact deployment model, SLOs and capacity require measured workload and available
-account/model versions. No cloud deployment, publishing or external message is authorized.
+account/model versions. The owner authorized public repository publication. Cloud deployment and direct
+messages to the hiring team were not requested.

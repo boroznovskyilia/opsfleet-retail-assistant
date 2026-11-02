@@ -97,6 +97,10 @@ credit limit as an additional provider-side boundary.
 
 ## Changes and scope
 
+The owner subsequently authorized public GitHub publication of this project. The
+repository reference and verification are recorded in [progress](../plans/progress.json).
+This does not authorize cloud deployment or direct messages to the hiring team.
+
 Use the [human-decision boundary](../development/workflow.md#human-decisions).
 Agents may correct stale documentation or resolve technical details inside agreed
 behavior independently; unresolved requirement meaning and proposed business changes
